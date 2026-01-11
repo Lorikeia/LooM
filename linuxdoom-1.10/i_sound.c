@@ -1,28 +1,7 @@
-// Emacs style mode select   -*- C++ -*- 
-//-----------------------------------------------------------------------------
-//
-// $Id:$
-//
-// Copyright (C) 1993-1996 by id Software, Inc.
-//
-// This source is available for distribution and/or modification
-// only under the terms of the DOOM Source Code License as
-// published by id Software. All rights reserved.
-//
-// The source is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// FITNESS FOR A PARTICULAR PURPOSE. See the DOOM Source Code License
-// for more details.
-//
-// $Log:$
-//
 // DESCRIPTION:
 //	System interface for sound.
-//
-//-----------------------------------------------------------------------------
 
-static const char
-rcsid[] = "$Id: i_unix.c,v 1.5 1997/02/03 22:45:10 b1 Exp $";
+// I shouldn't be removing copyright notices like this, but... shit, yeah. That's a bad idea. 
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -33,9 +12,7 @@ rcsid[] = "$Id: i_unix.c,v 1.5 1997/02/03 22:45:10 b1 Exp $";
 #include <sys/time.h>
 #include <sys/types.h>
 
-#ifndef LINUX
-#include <sys/filio.h>
-#endif
+// This is where the first error brought me. Linux doesn't know what filio is because it's cool. I owe the government a lot of money.
 
 #include <fcntl.h>
 #include <unistd.h>
@@ -43,6 +20,9 @@ rcsid[] = "$Id: i_unix.c,v 1.5 1997/02/03 22:45:10 b1 Exp $";
 
 // Linux voxware output.
 #include <linux/soundcard.h>
+
+// You...
+#include <errno.h>
 
 // Timer stuff. Experimental.
 #include <time.h>

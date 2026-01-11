@@ -1,14 +1,8 @@
-################################################################
-#
-# $Id:$
-#
-# $Log:$
-#
 CC=  gcc  # gcc or g++
 
-CFLAGS=-g -Wall -DNORMALUNIX -DLINUX # -DUSEASM 
+CFLAGS=-g -Wall# --std=c2x	# Big boy shit.
 LDFLAGS=-L/usr/X11R6/lib
-LIBS=-lXext -lX11 -lnsl -lm
+LIBS=-lXext -lX11 -lnsl -lm -lSDL3
 
 # subdirectory for objects
 O=linux
@@ -80,8 +74,7 @@ OBJS=				\
 all:	 $(O)/linuxxdoom
 
 clean:
-	rm -f *.o *~ *.flc
-	rm -f linux/*
+	rm -f linux/*.o
 
 $(O)/linuxxdoom:	$(OBJS) $(O)/i_main.o
 	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS) $(O)/i_main.o \
@@ -89,7 +82,3 @@ $(O)/linuxxdoom:	$(OBJS) $(O)/i_main.o
 
 $(O)/%.o:	%.c
 	$(CC) $(CFLAGS) -c $< -o $@
-
-#############################################################
-#
-#############################################################

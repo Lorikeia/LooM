@@ -1,28 +1,5 @@
-// Emacs style mode select   -*- C++ -*- 
-//-----------------------------------------------------------------------------
-//
-// $Id:$
-//
-// Copyright (C) 1993-1996 by id Software, Inc.
-//
-// This source is available for distribution and/or modification
-// only under the terms of the DOOM Source Code License as
-// published by id Software. All rights reserved.
-//
-// The source is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// FITNESS FOR A PARTICULAR PURPOSE. See the DOOM Source Code License
-// for more details.
-//
-// $Log:$
-//
 // DESCRIPTION:
-//	DOOM graphics stuff for X11, UNIX.
-//
-//-----------------------------------------------------------------------------
-
-static const char
-rcsid[] = "$Id: i_x.c,v 1.6 1997/02/03 22:45:10 b1 Exp $";
+//	DOOM graphics stuff for (soon to be) SDL3!!
 
 #include <stdlib.h>
 #include <unistd.h>
@@ -36,9 +13,11 @@ rcsid[] = "$Id: i_x.c,v 1.6 1997/02/03 22:45:10 b1 Exp $";
 #include <X11/extensions/XShm.h>
 // Had to dig up XShm.c for this one.
 // It is in the libXext, but not in the XFree86 headers.
-#ifdef LINUX
+
 int XShmGetEventBase( Display* dpy ); // problems with g++?
-#endif
+
+
+//#include <SDL3/SDL.h>	// Can't be using the usual boolean with you around.
 
 #include <stdarg.h>
 #include <sys/time.h>
@@ -46,7 +25,7 @@ int XShmGetEventBase( Display* dpy ); // problems with g++?
 #include <sys/socket.h>
 
 #include <netinet/in.h>
-#include <errnos.h>
+#include <errno.h>
 #include <signal.h>
 
 #include "doomstat.h"

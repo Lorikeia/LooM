@@ -1,30 +1,6 @@
-// Emacs style mode select   -*- C++ -*- 
-//-----------------------------------------------------------------------------
-//
-// $Id:$
-//
-// Copyright (C) 1993-1996 by id Software, Inc.
-//
-// This source is available for distribution and/or modification
-// only under the terms of the DOOM Source Code License as
-// published by id Software. All rights reserved.
-//
-// The source is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// FITNESS FOR A PARTICULAR PURPOSE. See the DOOM Source Code License
-// for more details.
-//
-// $Log:$
-//
 // DESCRIPTION:
 //	Do all the WAD I/O, get map description,
 //	set up initial state and misc. LUTs.
-//
-//-----------------------------------------------------------------------------
-
-static const char
-rcsid[] = "$Id: p_setup.c,v 1.5 1997/02/03 22:45:12 b1 Exp $";
-
 
 #include <math.h>
 
@@ -484,7 +460,7 @@ void P_LoadBlockMap (int lump)
     bmapheight = blockmaplump[3];
 	
     // clear out mobj chains
-    count = sizeof(*blocklinks)* bmapwidth*bmapheight;
+    count = sizeof(*blocklinks)* bmapwidth*bmapheight;	// Good one.
     blocklinks = Z_Malloc (count,PU_LEVEL, 0);
     memset (blocklinks, 0, count);
 }
@@ -533,7 +509,7 @@ void P_GroupLines (void)
     }
 	
     // build line tables for each sector	
-    linebuffer = Z_Malloc (total*4, PU_LEVEL, 0);
+    linebuffer = Z_Malloc (total*8, PU_LEVEL, 0);
     sector = sectors;
     for (i=0 ; i<numsectors ; i++, sector++)
     {

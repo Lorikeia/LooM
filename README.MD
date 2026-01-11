@@ -1,4 +1,5 @@
-# LoDooM
+# LooM
+## (I'm renaming this to LooM for now because I don't like typing out LoDooM.)
 Guess who just realized his computer has an FPU! It was me!!
 
 I spent the last week writing an enourmous source port of my own, gutting the original codebase so I could spread my beautiful knowledge through the "modernization" of a 90s game engine. Guess who forgot to stop writing code like it was 1991! It was me, again. You know this already.

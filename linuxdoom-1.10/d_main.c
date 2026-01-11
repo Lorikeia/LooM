@@ -1,44 +1,20 @@
-// Emacs style mode select   -*- C++ -*- 
-//-----------------------------------------------------------------------------
-//
-// $Id:$
-//
-// Copyright (C) 1993-1996 by id Software, Inc.
-//
-// This source is available for distribution and/or modification
-// only under the terms of the DOOM Source Code License as
-// published by id Software. All rights reserved.
-//
-// The source is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// FITNESS FOR A PARTICULAR PURPOSE. See the DOOM Source Code License
-// for more details.
-//
-// $Log:$
-//
 // DESCRIPTION:
 //	DOOM main program (D_DoomMain) and game loop (D_DoomLoop),
 //	plus functions to determine game mode (shareware, registered),
 //	parse command line parameters, configure game parameters (turbo),
 //	and call the startup functions.
-//
-//-----------------------------------------------------------------------------
-
-
-static const char rcsid[] = "$Id: d_main.c,v 1.8 1997/02/03 22:45:09 b1 Exp $";
 
 #define	BGCOLOR		7
 #define	FGCOLOR		8
 
-
-#ifdef NORMALUNIX
+// I worry about abnormal Linux...
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#endif
+
 
 
 #include "doomdef.h"
@@ -572,8 +548,7 @@ void IdentifyVersion (void)
     char*	plutoniawad;
     char*	tntwad;
 
-#ifdef NORMALUNIX
-    char *home;
+	char *home;
     char *doomwaddir;
     doomwaddir = getenv("DOOMWADDIR");
     if (!doomwaddir)
@@ -612,7 +587,6 @@ void IdentifyVersion (void)
     if (!home)
       I_Error("Please set $HOME to your home directory");
     sprintf(basedefault, "%s/.doomrc", home);
-#endif
 
     if (M_CheckParm ("-shdev"))
     {
