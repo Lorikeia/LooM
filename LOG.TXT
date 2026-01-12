@@ -1,0 +1,44 @@
+This is a log... alright? A normal, ever day log that I WILL be using to keep
+track of what the hell it is that I'm doing here. This long will probably not
+be forgotton, persay, but I already know that I'm gonna end up neglecting it in
+most cases, because who the hell wants to keep an up-to-date log for every
+single modification they make in a project where you can leave "//" comments for
+(hopefully) future YOU to read?? Absolutely nobody, that's who!
+
+6:14 PM 6-11
+Why bother leaving properly formatted & searchable tags? This is MY log! I left
+the date and time that I started writing it, so we're good, alright? I'm so
+awesome and funny. Everybody loves me. That's what I always say. Tell yourself
+that once a day, every day, and you'll end up just like me! Okay, maybe don't do
+that... Stick it to the man! Whatever, yo.
+
+Anyways, I've been sitting here waiting for GCC 15.2 to compile so I can finally
+get rid of the nasty enum that doom uses as a bool! One problem: it *also* uses
+that very same bool as a part of its... lovely structs. That causes some
+despicable errors, notably in wad loading, when you change the underlying type
+of the boolean. enum, in my case, and probably id Software's too, takes up four
+bytes. A nice, shiny bool with stdbool.h, however, usually takes up ONE!! Now,
+in some cases, who gives a shit, right? But in SOME cases, like the wad loading,
+they specifically needed that four byte wide GURT to make the structs line up. I
+hate structs with all of my heart.
+
+Also, once GCC 15.2 is finally ready, probably in five weeks, I might switch
+things up to my mortal enemy: c++. I know! I know. Anyways, let's focus on SDL3.
+
+9:25 AM 6-12
+Okay! So, I just realized that I obviously need, y'know, the period of time of
+day, because we use 12 hour clocks instead of 24. We should start using a
+measurement of 0 - 1 to tell us how far we are through the day. "Hey Jordan!
+What time is it?". I'd say Jordan's not my name, first of all, but then I'd say
+"Oh, it's roughly 0.3923611111!". Okay, maybe not a good idea, but it was worth
+a shot.
+
+Anyways, GCC 15.2 has finally finished compiling! I knew because when I checked
+my computer this morning, the first thing I saw was "Disk '/dev/mmcblk0p2' usage
+is 92 %!" in the top right corner, so I started praying to just about every god
+there is, and lo&behold, it was done! Now came time to install... oh my fucking
+god, man. I have, like, 300mb left in my storage. Fatass GCC took up everything,
+BUT! we can use the cool stuff now!
+
+Also, I got SDL3 implemented last night! Well, the video at least. The audio
+comes... some time later.
