@@ -5,7 +5,7 @@ most cases, because who the hell wants to keep an up-to-date log for every
 single modification they make in a project where you can leave "//" comments for
 (hopefully) future YOU to read?? Absolutely nobody, that's who!
 
-6:14 PM 6-11
+6:14 PM 1-11
 Why bother leaving properly formatted & searchable tags? This is MY log! I left
 the date and time that I started writing it, so we're good, alright? I'm so
 awesome and funny. Everybody loves me. That's what I always say. Tell yourself
@@ -25,7 +25,7 @@ hate structs with all of my heart.
 Also, once GCC 15.2 is finally ready, probably in five weeks, I might switch
 things up to my mortal enemy: c++. I know! I know. Anyways, let's focus on SDL3.
 
-9:25 AM 6-12
+9:25 AM 1-12
 Okay! So, I just realized that I obviously need, y'know, the period of time of
 day, because we use 12 hour clocks instead of 24. We should start using a
 measurement of 0 - 1 to tell us how far we are through the day. "Hey Jordan!
