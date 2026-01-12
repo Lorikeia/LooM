@@ -1,8 +1,8 @@
 CC=  gcc  # gcc or g++
 
-CFLAGS=-g -Wall# --std=c2x	# Big boy shit.
-LDFLAGS=-L/usr/X11R6/lib
-LIBS=-lXext -lX11 -lnsl -lm -lSDL3
+CFLAGS=-g -fpermissive # --std=c23 # Permissive? What are you talking about?? Turns out that GCC 15.2 is a hell of a lot more strict, and I'm lazy. This is TEMPORARY.
+LDFLAGS=
+LIBS=-lnsl -lm -lSDL3
 
 # subdirectory for objects
 O=linux
